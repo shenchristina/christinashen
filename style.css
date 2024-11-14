@@ -24,6 +24,7 @@ body{
     overflow-x: hidden;
     background-color: #09131F;
     color: #e3faff;
+    overflow-x: hidden;
 }
 
 /* Header and Logo */
@@ -76,7 +77,7 @@ nav a.active {
     border-bottom: 3px solid #3369aa;
 }
 
-@media(max-width:900px){
+/* @media(max-width:900px){
     nav{
         position: absolute;
         display: none;
@@ -103,6 +104,40 @@ nav a.active {
 
     nav a:hover,
     nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #3369aa;
+    }
+} */
+
+@media (max-width: 600px) {
+    nav {
+        position: absolute;
+        display: none;  /* Hide navigation by default */
+        top: 0;
+        right: 0;
+        width: 60%; /* Adjust width */
+        border-left: 3px solid #3369aa;
+        border-bottom: 3px solid #3369aa;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem;
+        background-color: #09131F;
+        border-top: 0.1rem solid #09131F;
+    }
+
+    /* When the nav is active (menu is toggled) */
+    nav.active {
+        display: block;  /* Show navigation */
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active {
         padding: 1rem;
         border-radius: 0.5rem;
         border-bottom: 0.5rem solid #3369aa;
@@ -191,7 +226,7 @@ span{
     }
 
     .home-content h3 {
-        font-size: calc(1.5rem + 4vw);
+        font-size: calc(1.3rem + 4vw);
         margin-bottom: 1rem;
         text-align: center;
     }
@@ -203,6 +238,7 @@ span{
         text-align: center;
     }
 }
+
 
 .about{
     display: flex;
