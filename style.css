@@ -21,10 +21,12 @@ html{
 body{
     width: 100%;
     height: 100vh;
-    overflow-x: hidden;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #09131F;
     color: #e3faff;
-    overflow-x: hidden;
 }
 
 /* Header, Navigation and Logo */
@@ -186,6 +188,9 @@ nav a.active {
 section{
     min-height: 100vh;
     padding: 5rem 9% 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .home{
@@ -241,6 +246,7 @@ span{
         margin-bottom: 1rem;
         text-align: center;
         word-wrap: none;
+        white-space: nowrap;
     }
 
     .home-content p {
