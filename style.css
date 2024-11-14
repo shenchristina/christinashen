@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+/* Global Settings */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #09131F;
+    color: #e3faff;
+}
+
+/* Header and Logo */
+
+header{
+    height: 80px;
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: #3369aa;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+
+/* Navigation */
+
+nav a {
+    font-size: 1.8rem;
+    color: #e3faff;
+    margin-left: 4rem;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+nav a.active {
+    color: #3369aa;
+    border-bottom: 3px solid #3369aa;
+}
+
+@media(max-width:900px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #3369aa;
+        border-bottom: 3px solid #3369aa;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #09131F;
+        border-top: 0.1rem solid #09131F;
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #3369aa;
+    }
+}
+
+
+#visual-mode {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 1.8rem; /* Match font-size to align with nav links */
+    margin-left: 2rem;
+}
+
+#visual-mode i {
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+#visual-mode:hover i {
+    color: #3369aa;
+}
+
+
+
+
+
+
+
+
+/* Section and Home Layout */
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    flex-wrap: wrap;
+    background-color: #09131F;
+}
+
+.home .home-content h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    gap: 1rem;
+
+}
+
+span{
+    color: #3369aa;
+}
+
+.home-content h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    gap: 1rem;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+    width: 80%;
+    word-wrap: break-word;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    /* align-items: 60%; */
+    /* gap: 8rem;
+    flex-wrap: wrap;
+    background-color: #09131F; */
+
+}
+
+.about-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    gap: 1rem;
+}
+
+/* Images */
+
+.about-img{
+    margin: auto;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    border: 3px solid white
+}
+
+.about-img img{
+    justify-content: center;
+    position: relative;
+    width: 30vw;
+    cursor: pointer;
+    transition: 0.2s linear;
+    gap: 1rem;
+}
+
+.about-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+/* Socials Icons */
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-icons a{
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #3369aa;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #3369aa;
+}
+
+.social-icons a:hover{
+    color: #09131F;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #3369aa;
+    box-shadow: 0  0 25px #3369aa;
+}
+
+
+/* Button Styling */
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: #09131F;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #3369aa;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #3369aa;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: #3369aa;
+    color: #09131F;
+    box-shadow: 0 0 25px #3369aa;
+}
+
+
+/* Typing Text Animation */
+
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    color: #3369aa;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: #09131F;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid #09131F;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid #3369aa;
+    }
+}
+
+@media (max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+/* Visual Mode (Light and Dark Mode) */
