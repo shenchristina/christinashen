@@ -21,10 +21,11 @@ html{
 body{
     width: 100%;
     height: 100vh;
-    overflow-x: hidden;
+    overflow: hidden;
     background-color: #09131F;
     color: #e3faff;
-    overflow-x: hidden;
+    align-items: center;
+    
 }
 
 /* Header and Logo */
@@ -209,6 +210,7 @@ span{
     margin-bottom: 1rem;
     font-weight: 700;
     gap: 1rem;
+    white-space: nowrap;
 }
 
 .home-content p{
