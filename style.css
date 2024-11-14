@@ -21,9 +21,10 @@ html{
 body{
     width: 100%;
     height: 100vh;
-    overflow: hidden;
-    background-color: #e3faff;
+    overflow-x: hidden;
+    background-color: #09131F;
     color: #e3faff;
+    overflow-x: hidden;
 }
 
 /* Header, Navigation and Logo */
@@ -75,6 +76,38 @@ nav a.active {
     border-bottom: 3px solid #3369aa;
 }
 
+/* @media(max-width:900px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #3369aa;
+        border-bottom: 3px solid #3369aa;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #09131F;
+        border-top: 0.1rem solid #09131F;
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #3369aa;
+    }
+} */
 
 .menu-toggle {
     display: none;
@@ -153,9 +186,6 @@ nav a.active {
 section{
     min-height: 100vh;
     padding: 5rem 9% 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .home{
@@ -195,7 +225,6 @@ span{
 .home-content p{
     font-size: 1.6rem;
     width: 80%;
-    white-space: nowrap;
     word-wrap: break-word;
     margin: 0 auto;
     text-align: center;
@@ -211,6 +240,7 @@ span{
         font-size: calc(1.3rem + 4vw);
         margin-bottom: 1rem;
         text-align: center;
+        word-wrap: none;
     }
 
     .home-content p {
