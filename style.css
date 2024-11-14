@@ -21,10 +21,9 @@ html{
 body{
     width: 100%;
     height: 100vh;
-    overflow-x: hidden;
-    background-color: red;
+    overflow: hidden;
+    background-color: #e3faff;
     color: #e3faff;
-    overflow-x: hidden;
 }
 
 /* Header, Navigation and Logo */
@@ -154,51 +153,49 @@ nav a.active {
 section{
     min-height: 100vh;
     padding: 5rem 9% 5rem;
-}
-
-.home {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full screen height */
-    width: 100%;  /* Full screen width */
-    overflow: hidden; /* Prevent scrolling */
-    position: relative; /* Keep content fixed */
 }
 
-.home .home-content {
+.home{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    position: absolute; /* Fix the content's position */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the content vertically and horizontally */
+    gap: 8rem;
+    flex-wrap: wrap;
+    background-color: #09131F;
 }
 
-.home .home-content h1 {
+.home .home-content h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 6rem;
     font-weight: 700;
     line-height: 1.3;
     gap: 1rem;
+
 }
 
-span {
+span{
     color: #3369aa;
 }
 
-.home-content h3 {
+.home-content h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 4rem;
     margin-bottom: 1rem;
     font-weight: 700;
     gap: 1rem;
 }
 
-.home-content p {
+.home-content p{
     font-size: 1.6rem;
     width: 80%;
+    white-space: nowrap;
     word-wrap: break-word;
     margin: 0 auto;
     text-align: center;
@@ -214,7 +211,6 @@ span {
         font-size: calc(1.3rem + 4vw);
         margin-bottom: 1rem;
         text-align: center;
-        white-space: nowrap;
     }
 
     .home-content p {
@@ -222,7 +218,6 @@ span {
         width: 90%;
         margin: 0 auto;
         text-align: center;
-        word-wrap: break-word;
     }
 }
 
