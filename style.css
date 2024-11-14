@@ -21,14 +21,15 @@ html{
 body{
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
     background-color: #09131F;
     color: #e3faff;
-    align-items: center;
-    
+    overflow-x: hidden;
 }
 
-/* Header and Logo */
+/* Header, Navigation and Logo */
+
+
 
 header{
     height: 80px;
@@ -60,9 +61,6 @@ header{
 .logo:hover{
     transform: scale(1.1);
 }
-
-
-/* Navigation */
 
 nav a {
     font-size: 1.8rem;
@@ -111,14 +109,28 @@ nav a.active {
     }
 } */
 
-@media (max-width: 600px) {
+.menu-toggle {
+    display: none;
+    font-size: 2.5rem;
+    background: none;
+    border: 2px solid e3faff;
+    color: e3faff;
+    cursor: pointer;
+    z-index: 9999;
+    padding: 0.5rem 1rem;
+}
+
+@media (max-width: 1000px) {
+    .menu-toggle {
+        display: block;
+    }
+
     nav {
         position: absolute;
         display: none;
-        align-items: center;
         top: 0;
         right: 0;
-        width: 60%; /* Adjust width */
+        width: 60%;
         border-left: 3px solid #3369aa;
         border-bottom: 3px solid #3369aa;
         border-bottom-left-radius: 2rem;
@@ -127,7 +139,6 @@ nav a.active {
         border-top: 0.1rem solid #09131F;
     }
 
-    /* When the nav is active (menu is toggled) */
     nav.active {
         display: block;
     }
@@ -136,6 +147,8 @@ nav a.active {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
+        color: #e3faff;
+        text-decoration: none;
     }
 
     nav a:hover,
@@ -145,6 +158,7 @@ nav a.active {
         border-bottom: 0.5rem solid #3369aa;
     }
 }
+
 
 
 #visual-mode {
@@ -162,13 +176,8 @@ nav a.active {
 }
 
 #visual-mode:hover i {
-    color: #3369aa;
+    color: #e3faff;
 }
-
-
-
-
-
 
 
 
@@ -211,7 +220,6 @@ span{
     margin-bottom: 1rem;
     font-weight: 700;
     gap: 1rem;
-    white-space: nowrap;
 }
 
 .home-content p{
@@ -270,7 +278,7 @@ span{
     /* display: flex;
     justify-content: center;
     align-items: center; */
-    border: 3px solid white
+    border: 3px solid e3faff
 }
 
 .about-img img{
