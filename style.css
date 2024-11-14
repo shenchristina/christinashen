@@ -22,7 +22,7 @@ body{
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
-    background-color: #09131F;
+    background-color: red;
     color: #e3faff;
     overflow-x: hidden;
 }
@@ -156,41 +156,47 @@ section{
     padding: 5rem 9% 5rem;
 }
 
-.home{
+.home {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8rem;
-    flex-wrap: wrap;
-    background-color: #09131F;
+    height: 100vh; /* Full screen height */
+    width: 100%;  /* Full screen width */
+    overflow: hidden; /* Prevent scrolling */
+    position: relative; /* Keep content fixed */
 }
 
-.home .home-content h1{
+.home .home-content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    position: absolute; /* Fix the content's position */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the content vertically and horizontally */
+}
+
+.home .home-content h1 {
     font-size: 6rem;
     font-weight: 700;
     line-height: 1.3;
     gap: 1rem;
-
 }
 
-span{
+span {
     color: #3369aa;
 }
 
-.home-content h3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.home-content h3 {
     font-size: 4rem;
     margin-bottom: 1rem;
     font-weight: 700;
     gap: 1rem;
 }
 
-.home-content p{
+.home-content p {
     font-size: 1.6rem;
     width: 80%;
     word-wrap: break-word;
@@ -199,32 +205,6 @@ span{
 }
 
 @media (max-width: 650px) {
-    body {
-        overflow: hidden;
-        height: 100vh;
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-    }
-
-    .home {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 8rem;
-        flex-wrap: wrap;
-        background-color: #09131F;
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
     .home .home-content h1 {
         font-size: calc(1rem + 5vw);
         text-align: center;
@@ -242,9 +222,9 @@ span{
         width: 90%;
         margin: 0 auto;
         text-align: center;
+        word-wrap: break-word;
     }
 }
-
 
 
 .about{
