@@ -114,7 +114,8 @@ nav a.active {
 @media (max-width: 600px) {
     nav {
         position: absolute;
-        display: none;  /* Hide navigation by default */
+        display: none;
+        align-items: center;
         top: 0;
         right: 0;
         width: 60%; /* Adjust width */
@@ -128,7 +129,7 @@ nav a.active {
 
     /* When the nav is active (menu is toggled) */
     nav.active {
-        display: block;  /* Show navigation */
+        display: block;
     }
 
     nav a {
@@ -151,7 +152,7 @@ nav a.active {
     border: none;
     color: inherit;
     cursor: pointer;
-    font-size: 1.8rem; /* Match font-size to align with nav links */
+    font-size: 1.8rem;
     margin-left: 2rem;
 }
 
