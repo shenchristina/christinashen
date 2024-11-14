@@ -231,6 +231,27 @@ span{
 }
 
 @media (max-width: 650px) {
+    body {
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8rem;
+        flex-wrap: wrap;
+        background-color: #09131F;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
     .home .home-content h1 {
         font-size: calc(1rem + 5vw);
         text-align: center;
@@ -240,6 +261,7 @@ span{
         font-size: calc(1.3rem + 4vw);
         margin-bottom: 1rem;
         text-align: center;
+        white-space: nowrap;
     }
 
     .home-content p {
